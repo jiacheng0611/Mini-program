@@ -1,0 +1,25 @@
+/* pages/check.wxss */
+.order-list {
+  padding: 16px;
+}
+
+.order-item {
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+.view-details-btn {
+  background-color: #007aff;  /* 蓝色背景 */
+  color: white;                /* 白色文字 */
+  padding: 5px 10px;          /* 上下左右内边距 */
+  border: none;                /* 无边框 */
+  border-radius: 5px;         /* 圆角 */
+  margin-top: 10px;           /* 上边距 */
+  cursor: pointer;             /* 鼠标指针为手型 */
+}
+
+.view-details-btn:hover {
+  background-color: #0056b3;  /* 悬停时的背景色 */
+}
+

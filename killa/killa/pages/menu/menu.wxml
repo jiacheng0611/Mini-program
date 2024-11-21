@@ -1,0 +1,99 @@
+<view class="container">
+  <!-- 左侧目录 -->
+  <scroll-view scroll-y class="side-menu">
+    <view 
+      wx:for="{{categories}}" 
+      wx:key="id" 
+      class="menu-category" 
+      bindtap="scrollToSection" 
+      data-section="{{item.id}}" 
+      wx:class="{{activeCategoryId === item.id ? 'active' : ''}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <!-- 右侧菜品展示 -->
+  <scroll-view scroll-y class="menu-content" scroll-into-view="{{scrollToView}}">
+    <view id="section-1">
+      <text class="section-title">精选单品</text>
+      <block wx:for="{{menu}}" wx:key="id">
+        <view class="menu-item">
+          <image src="{{item.img}}" class="menu-item-img" mode="aspectFit"></image>
+          <view class="menu-item-info">
+            <text class="item-name">{{item.name}}</text>
+            <text class="item-price">￥{{item.price}}</text>
+            <view class="quantity-control">
+              <button class="quantity-btn decrease-btn" bindtap="decreaseQuantity" data-id="{{item.id}}">-</button>
+              <text class="quantity-text">{{item.quantity}}</text>
+              <button class="quantity-btn increase-btn" bindtap="increaseQuantity" data-id="{{item.id}}">+</button>
+            </view>
+            <button class="add-cart-btn" data-id="{{item.id}}" bindtap="addToCart">加入购物车</button>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <view id="section-2">
+      <text class="section-title">经典套餐</text>
+      <block wx:for="{{menu2}}" wx:key="id">
+        <view class="menu-item">
+          <image src="{{item.img}}" class="menu-item-img" mode="aspectFit"></image>
+          <view class="menu-item-info">
+            <text class="item-name">{{item.name}}</text>
+            <text class="item-price">￥{{item.price}}</text>
+            <view class="quantity-control">
+              <button class="quantity-btn decrease-btn" bindtap="decreaseQuantity" data-id="{{item.id}}">-</button>
+              <text class="quantity-text">{{item.quantity}}</text>
+              <button class="quantity-btn increase-btn" bindtap="increaseQuantity" data-id="{{item.id}}">+</button>
+            </view>
+            <button class="add-cart-btn" data-id="{{item.id}}" bindtap="addToCart">加入购物车</button>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <view id="section-3">
+      <text class="section-title">超绝汤品</text>
+      <block wx:for="{{menu3}}" wx:key="id">
+        <view class="menu-item">
+          <image src="{{item.img}}" class="menu-item-img" mode="aspectFit"></image>
+          <view class="menu-item-info">
+            <text class="item-name">{{item.name}}</text>
+            <text class="item-price">￥{{item.price}}</text>
+            <view class="quantity-control">
+              <button class="quantity-btn decrease-btn" bindtap="decreaseQuantity" data-id="{{item.id}}">-</button>
+              <text class="quantity-text">{{item.quantity}}</text>
+              <button class="quantity-btn increase-btn" bindtap="increaseQuantity" data-id="{{item.id}}">+</button>
+            </view>
+            <button class="add-cart-btn" data-id="{{item.id}}" bindtap="addToCart">加入购物车</button>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <view id="section-4">
+      <text class="section-title">主食&套餐</text>
+      <block wx:for="{{menu4}}" wx:key="id">
+        <view class="menu-item">
+          <image src="{{item.img}}" class="menu-item-img" mode="aspectFit"></image>
+          <view class="menu-item-info">
+            <text class="item-name">{{item.name}}</text>
+            <text class="item-price">￥{{item.price}}</text>
+            <view class="quantity-control">
+              <button class="quantity-btn decrease-btn" bindtap="decreaseQuantity" data-id="{{item.id}}">-</button>
+              <text class="quantity-text">{{item.quantity}}</text>
+              <button class="quantity-btn increase-btn" bindtap="increaseQuantity" data-id="{{item.id}}">+</button>
+            </view>
+            <button class="add-cart-btn" data-id="{{item.id}}" bindtap="addToCart">加入购物车</button>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <view class="cart-footer" bindtap="goToCart">
+      前往购物车
+    </view>
+
+
+  </scroll-view>
+</view>

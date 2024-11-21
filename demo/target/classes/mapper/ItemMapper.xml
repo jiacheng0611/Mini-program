@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC ".//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.ItemDao">
+
+    <insert id="insert">
+        insert into item (item_id,item_quantity,order_id,item_name) values (#{item.item_id},#{item.item_quantity},#{order_id},#{item.item_name})
+    </insert>
+
+    <select id="select_order" parameterType="int" resultType="com.example.demo.entity.Dish">
+        select  item_id as id, item_quantity as quantity ,item_name as name from item where order_id = #{id}
+    </select>
+
+</mapper>

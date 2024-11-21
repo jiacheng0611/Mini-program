@@ -1,0 +1,18 @@
+/* pages/business/business.wxss */
+.menu-button {
+  background-color: #ff7f50; /* 按钮背景色 */
+  color: #fff; /* 文字颜色 */
+  padding: 12px 20px; /* 内边距 */
+  text-align: center; /* 文字居中 */
+  border-radius: 8px; /* 圆角 */
+  font-size: 16px; /* 字体大小 */
+  font-weight: bold; /* 粗体 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  margin: 20px auto; /* 上下边距 */
+  width: 90%; /* 宽度适中 */
+}
+
+.menu-button:hover {
+  background-color: #ff6347; /* 悬停背景色变化 */
+  cursor: pointer; /* 鼠标悬停变成指针 */
+}

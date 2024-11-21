@@ -1,0 +1,13 @@
+<view class="container">
+    <button class="menu-button" bindtap="goToOrderList">订单详情</button>
+  <button class="menu-button" bindtap="navigateToService">售后服务</button>
+  <button class="menu-button" bindtap="navigateToAccount">账户资金管理</button>
+  <button class="menu-button" bindtap="navigateToChat">员工聊天</button>
+  <button class="menu-button" bindtap="navigateToProduct">商品管理</button>
+  <button class="menu-button" bindtap="navigateToEvents">店铺活动</button>
+  <button class="menu-button" bindtap="navigateToTeam">我们的团队</button>
+
+</view>
+
+
+<!-- 添加跳转到订单列表的按钮 -->

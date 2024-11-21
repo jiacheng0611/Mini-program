@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC ".//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.OrderDao">
+
+    <insert id="insert">
+        insert into itemorder (order_id,order_user,order_time,order_status,order_amount,order_people) values (#{order_id},#{order_user},#{order_time},#{order_status},#{order_amount},#{order_people})
+    </insert>
+
+    <select id="select_order"  resultType="com.example.demo.entity.Item_Order">
+        select order_id , order_user, order_time,order_status, order_amount, order_people from itemorder
+    </select>
+
+    <delete id="delete_order">
+        delete from itemorder
+        where order_id = #{order_id}
+    </delete>
+
+    <update id="update_order_status">
+        update itemorder
+        set order_status = '已接单'
+        where order_id = #{order_id}
+    </update>
+</mapper>

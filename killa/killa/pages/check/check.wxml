@@ -1,0 +1,21 @@
+<view class="container">
+  <text class="section-title">订单列表</text>
+  
+  <block wx:for="{{orders}}" wx:key="orderId">
+    <view class="order-item" bindtap="viewOrderDetails" data-id="{{item.orderId}}">
+      <text>订单编号: {{item.name}}</text>
+      <text>顾客姓名: {{item.id}}</text>
+      <text>下单时间: {{item.quantity}}</text>
+
+      
+      <button class="view-details-btn" bindtap="viewOrderDetails" data-id="{{item.orderId}}">查看详情</button> <!-- 添加查看详情按钮 -->
+
+      <view class="divider"></view>  <!-- 分隔线 -->
+    </view>
+  </block>
+
+  <view class="no-orders" wx:if="{{orders.length === 0}}">
+    <text>暂无订单</text>
+    
+  </view>
+</view>

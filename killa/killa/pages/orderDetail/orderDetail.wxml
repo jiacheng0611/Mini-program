@@ -1,0 +1,48 @@
+<view class="container">
+  <view class="section">
+    <text class="section-title">订单概览</text>
+    <view class="info-item"><text>订单编号：</text><text>{{order.order_id}}</text></view>
+    <view class="info-item"><text>订单状态：</text><text>{{order.order_status}}</text></view>
+    <view class="info-item"><text>下单时间：</text><text>{{order.order_time}}</text></view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">用户信息</text>
+    <view class="info-item"><text>顾客姓名：</text><text>{{order.order_user}}</text></view>
+    <!-- <view class="info-item"><text>联系方式：</text><text>{{order.contact}}</text></view>
+    <view class="info-item"><text>送达地址/桌号：</text><text>{{order.address}}</text></view> -->
+    <view class="info-item"><text>用户人数：</text><text>{{order.order_people}}</text></view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">订单详情</text>
+    <block wx:for="{{orderDetails}}" wx:key="id">
+      <view class="info-item">
+        <text>{{item.name}} x{{item.quantity}}</text>
+      </view>
+    </block>
+    <view class="info-item"><text>总金额：</text><text>￥{{order.order_amount}}</text></view>
+    <!-- <view class="info-item"><text>备注：</text><text>{{order.remarks}}</text></view> -->
+  </view>
+
+  <!-- <view class="section">
+    <text class="section-title">付款信息</text>
+    <view class="info-item"><text>支付方式：</text><text>{{order.paymentMethod}}</text></view>
+    <view class="info-item"><text>支付状态：</text><text>{{order.paymentStatus}}</text></view>
+  </view> -->
+
+  <!-- <view class="section">
+    <text class="section-title">配送信息</text>
+    <view class="info-item"><text>配送方式：</text><text>{{order.deliveryMethod}}</text></view>
+    <view class="info-item"><text>配送员：</text><text>{{order.deliveryPerson}}</text></view>
+    <view class="info-item"><text>预计送达时间：</text><text>{{order.estimatedTime}}</text></view>
+  </view> -->
+</view>
+<view class="container">
+  <!-- 返回按钮 -->
+  <button class="back-button" bindtap="goBack">返回</button>
+
+
+
+  <!-- 其他订单详情部分... -->
+</view>

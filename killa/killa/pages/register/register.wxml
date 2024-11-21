@@ -1,0 +1,28 @@
+<view class="container">
+  <!-- 标题 -->
+  <view class="title">注册</view>
+
+  <!-- 用户类型切换 -->
+  <view class="role-selection">
+    <text class="{{selectedRole === 'user' ? 'selected' : ''}}" bindtap="selectUser">我是用户</text>
+    <text class="{{selectedRole === 'merchant' ? 'selected' : ''}}" bindtap="selectMerchant">我是商户</text>
+  </view>
+
+  <!-- 用户名输入框 -->
+  <view class="input-box">
+    <input class="input" placeholder="请输入账号" bindinput="onUsernameInput"/>
+  </view>
+
+  <!-- 密码输入框 -->
+  <view class="input-box">
+    <input class="input" password="true" placeholder="请输入密码" bindinput="onPasswordInput"/>
+  </view>
+
+  <!-- 确认密码输入框 -->
+  <view class="input-box">
+    <input class="input" password="true" placeholder="请再次输入密码" bindinput="onConfirmPasswordInput"/>
+  </view>
+
+  <!-- 注册按钮 -->
+  <button class="next-button" bindtap="onRegister">注册</button>
+</view>
