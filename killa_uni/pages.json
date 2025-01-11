@@ -1,0 +1,71 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/menu/menu",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/business/business",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/check/check",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "订单列表",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/orderDetail/orderDetail",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/register/register",
+			"style": {
+				"usingComponents": {}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTitleText": "欢迎光临温馨小店",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTextStyle": "black"
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	},
+	"subPackages": []
+}
